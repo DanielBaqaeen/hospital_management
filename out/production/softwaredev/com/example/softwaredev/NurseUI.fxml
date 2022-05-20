@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="328.0" prefWidth="342.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.softwaredev.NurseUIController">
+
+   <Button fx:id="editButton" layoutX="100.0" layoutY="141.0" mnemonicParsing="false" onAction="#editButtonClicked" prefHeight="41.0" prefWidth="143.0" text="Edit Patient Record" />
+   <Button fx:id="viewButton" layoutX="100.0" layoutY="198.0" mnemonicParsing="false" onAction="#viewButtonClicked" prefHeight="41.0" prefWidth="143.0" text="View Patient Record" />
+   <Label alignment="CENTER" layoutY="58.0" prefHeight="67.0" prefWidth="342.0" text="Nurse Menu">
+      <font>
+         <Font name="System Bold" size="24.0" />
+      </font>
+   </Label>
+   <Button fx:id="nurLogoutButton" layoutX="266.0" layoutY="14.0" mnemonicParsing="false" onAction="#nurLogoutButtonClicked" text="Logout">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Button>
+</AnchorPane>

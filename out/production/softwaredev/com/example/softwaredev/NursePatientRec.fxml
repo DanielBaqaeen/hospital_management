@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="941.0" prefWidth="956.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.softwaredev.NursePatientRecController">
+
+    <children>
+        <Label layoutX="10.0" layoutY="188.0" text="Email" />
+        <Label layoutX="309.0" layoutY="188.0" text="Phone Number" />
+        <Label layoutX="11.0" layoutY="310.0" text="Name" />
+        <TextField fx:id="email" layoutX="45.0" layoutY="184.0" prefHeight="25.0" prefWidth="201.0" />
+        <Label layoutX="10.0" layoutY="375.0" text="Primary Physician" />
+        <TextField fx:id="emerConPhone" layoutX="395.0" layoutY="184.0" />
+        <Label layoutX="10.0" layoutY="716.0" text="Current Symptom(s)" />
+        <Label layoutX="9.0" layoutY="798.0" text="Have you received the COVID vaccine?" />
+        <Label layoutX="10.0" layoutY="638.0" text="Have you taken any medication(s) previously? If so, please list them below." />
+        <Label layoutX="378.0" layoutY="719.0" />
+        <Label layoutX="278.0" layoutY="544.0" />
+        <Label layoutX="349.0" layoutY="798.0" text="If so, which type did you receive?" />
+        <Label layoutX="27.0" layoutY="875.0" text="2nd dose" />
+        <Label layoutX="31.0" layoutY="843.0" text="1st dose" />
+        <Label layoutX="33.0" layoutY="906.0" text="Booster" />
+        <TextField fx:id="booster" layoutX="85.0" layoutY="903.0" prefHeight="25.0" prefWidth="125.0" />
+        <TextField fx:id="secondDose" layoutX="85.0" layoutY="871.0" prefHeight="25.0" prefWidth="125.0" />
+        <TextArea fx:id="symptoms" layoutX="10.0" layoutY="733.0" prefHeight="58.0" prefWidth="534.0" />
+      <SplitPane dividerPositions="0.007518796992481203" layoutX="555.0" layoutY="-1.0" prefHeight="941.0" prefWidth="401.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="644.0" prefWidth="10.0" />
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="955.0" prefWidth="393.0">
+               <children>
+                  <Label layoutX="184.0" layoutY="527.0" text="Notes" />
+                  <TextArea fx:id="nurNotes" layoutX="42.0" layoutY="544.0" prefHeight="280.0" prefWidth="310.0" />
+                  <TextField fx:id="assignedPhys" layoutX="109.0" layoutY="437.0" prefHeight="25.0" prefWidth="175.0" />
+                  <Label layoutX="178.0" layoutY="14.0" text="Vitals">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="119.0" layoutY="346.0" text="Will this patient be admitted?" />
+                  <Label layoutX="147.0" layoutY="420.0" text="Assigned Physician" />
+                  <Label layoutX="150.0" layoutY="473.0" text="Room #" />
+                  <Label layoutX="86.0" layoutY="47.0" text="Body Temperature" />
+                  <Label layoutX="86.0" layoutY="78.0" text="Blood Pressure" />
+                  <Label layoutX="85.0" layoutY="109.0" text="Pulse Rate" />
+                  <Label layoutX="84.0" layoutY="140.0" text="Respiration Rate" />
+                  <TextField fx:id="bodyTemp" layoutX="227.0" layoutY="43.0" prefHeight="25.0" prefWidth="50.0" />
+                  <TextField fx:id="bloodPress" layoutX="227.0" layoutY="74.0" prefHeight="25.0" prefWidth="50.0" />
+                  <TextField fx:id="pulseRate" layoutX="227.0" layoutY="105.0" prefHeight="25.0" prefWidth="50.0" />
+                  <TextField fx:id="resRate" layoutX="227.0" layoutY="136.0" prefHeight="25.0" prefWidth="50.0" />
+                  <Label layoutX="192.0" layoutY="207.0" text="IVs" />
+                  <TextArea fx:id="iVs" layoutX="42.0" layoutY="224.0" prefHeight="100.0" prefWidth="310.0" />
+                  <TextField fx:id="rmNum" layoutX="194.0" layoutY="469.0" prefHeight="25.0" prefWidth="50.0" />
+                    <Button fx:id="submitButton" layoutX="146.0" layoutY="873.0" mnemonicParsing="false" onAction="#submitButtonClicked" prefHeight="35.0" prefWidth="126.0" text="Submit">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+                  <Label layoutX="124.0" layoutY="393.0" text="For how many days?" />
+                  <TextField fx:id="stayedDays" layoutX="236.0" layoutY="389.0" prefHeight="25.0" prefWidth="45.0" />
+                  <ChoiceBox fx:id="admittedChoiceBox" layoutX="172.0" layoutY="363.0" prefHeight="25.0" prefWidth="50.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <Label alignment="CENTER" layoutY="16.0" prefHeight="17.0" prefWidth="557.0" text="Patient Medical Record" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="searchBar" layoutX="10.0" layoutY="64.0" />
+      <Button fx:id="searchButton" layoutX="161.0" layoutY="64.0" mnemonicParsing="false" onAction="#searchButtonClicked" prefHeight="25.0" prefWidth="60.0" text="Search" />
+        <Label layoutX="9.0" layoutY="126.0" text="Patient Name" />
+        <TextField fx:id="patientName" layoutX="85.0" layoutY="123.0" prefHeight="25.0" prefWidth="232.0" />
+        <Label layoutX="368.0" layoutY="126.0" prefHeight="17.0" prefWidth="29.0" text="SSN" />
+        <Label layoutX="10.0" layoutY="157.0" text="Address" />
+        <TextField fx:id="address" layoutX="56.0" layoutY="153.0" prefHeight="25.0" prefWidth="489.0" />
+        <TextField fx:id="SSN" layoutX="393.0" layoutY="122.0" prefHeight="25.0" prefWidth="152.0" />
+        <Label layoutX="10.0" layoutY="219.0" text="Date of Birth (MM/DD/YYYY)" />
+        <TextField fx:id="dob" layoutX="165.0" layoutY="215.0" />
+        <Label layoutX="320.0" layoutY="219.0" text="Height" />
+        <TextField fx:id="heightFt" layoutX="359.0" layoutY="215.0" prefHeight="25.0" prefWidth="26.0" />
+        <Label layoutX="387.0" layoutY="219.0" text="ft" />
+        <TextField fx:id="heightIn" layoutX="397.0" layoutY="214.0" prefHeight="25.0" prefWidth="32.0" />
+        <Label layoutX="431.0" layoutY="219.0" text="in" />
+        <Label layoutX="447.0" layoutY="218.0" text="Weight" />
+        <TextField fx:id="weight" layoutX="489.0" layoutY="213.0" prefHeight="25.0" prefWidth="36.0" />
+        <Label layoutX="528.0" layoutY="218.0" text="lbs" />
+        <Label layoutX="11.0" layoutY="251.0" text="Blood Type" />
+        <ChoiceBox fx:id="bloodTypeChoiceBox" layoutX="74.0" layoutY="247.0" prefHeight="25.0" prefWidth="44.0" />
+        <Label layoutX="123.0" layoutY="251.0" text="Race" />
+      <ChoiceBox fx:id="raceChoiceBox" layoutX="151.0" layoutY="247.0" prefHeight="25.0" prefWidth="107.0" />
+        <Label layoutX="264.0" layoutY="251.0" text="Gender" />
+      <ChoiceBox fx:id="genderChoiceBox" layoutX="306.0" layoutY="247.0" prefHeight="25.0" prefWidth="89.0" />
+        <Label layoutX="400.0" layoutY="251.0" text="Religion" />
+        <Label layoutX="10.0" layoutY="285.0" text="Emergency Contact Information">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="emerConName" layoutX="45.0" layoutY="306.0" prefHeight="25.0" prefWidth="220.0" />
+        <Label layoutX="309.0" layoutY="310.0" text="Phone Number" />
+        <TextField fx:id="pPhoneNum" layoutX="396.0" layoutY="306.0" />
+        <Label layoutX="10.0" layoutY="352.0" text="Medical Information">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="primPhys" layoutX="111.0" layoutY="371.0" prefHeight="25.0" prefWidth="433.0" />
+        <Label layoutX="10.0" layoutY="405.0" text="Health Insurance" />
+        <TextField fx:id="healthInsur" layoutX="111.0" layoutY="402.0" prefHeight="25.0" prefWidth="433.0" />
+        <Label layoutX="9.0" layoutY="437.0" text="Are you sexually active?" />
+        <Label layoutX="307.0" layoutY="437.0" text="Are you currently pregnant?" />
+        <Label layoutX="307.0" layoutY="468.0" text="If so, how many weeks?" />
+        <TextField fx:id="weeksPreg" layoutX="437.0" layoutY="464.0" prefHeight="25.0" prefWidth="36.0" />
+        <Label layoutX="9.0" layoutY="562.0" text="Have you had any previous medical condition(s)? If so, please list them below." />
+        <Label layoutX="10.0" layoutY="484.0" text="Do you have any allergies? If so, please list them below." />
+        <TextArea fx:id="allergies" layoutX="10.0" layoutY="502.0" prefHeight="58.0" prefWidth="534.0" />
+        <TextArea fx:id="medCons" layoutX="10.0" layoutY="579.0" prefHeight="58.0" prefWidth="534.0" />
+        <TextArea fx:id="meds" layoutX="10.0" layoutY="655.0" prefHeight="58.0" prefWidth="534.0" />
+        <ChoiceBox fx:id="covidVTypeChoiceBox" layoutX="374.0" layoutY="816.0" prefHeight="25.0" prefWidth="126.0" />
+        <Label layoutX="9.0" layoutY="821.0" text="What date(s) did you receive them? (MM/DD/YYYY)" />
+        <TextField fx:id="firstDose" layoutX="86.0" layoutY="840.0" prefHeight="25.0" prefWidth="125.0" />
+        <Label layoutX="425.0" layoutY="864.0" text="Date" />
+        <TextField fx:id="currDate" layoutX="372.0" layoutY="882.0" prefHeight="25.0" prefWidth="135.0" />
+      <ChoiceBox fx:id="sActiveChoiceBox" layoutX="138.0" layoutY="433.0" prefHeight="25.0" prefWidth="50.0" />
+      <ChoiceBox fx:id="pregChoiceBox" layoutX="459.0" layoutY="433.0" prefHeight="25.0" prefWidth="50.0" />
+      <ChoiceBox fx:id="cVaccineChoiceBox" layoutX="217.0" layoutY="794.0" prefHeight="25.0" prefWidth="50.0" />
+      <Label layoutX="450.0" layoutY="68.0" text="Patient ID" />
+      <TextField fx:id="patientID" layoutX="505.0" layoutY="64.0" prefHeight="25.0" prefWidth="39.0" />
+      <TextField fx:id="religion" layoutX="444.0" layoutY="247.0" prefHeight="25.0" prefWidth="100.0" />
+    </children>
+
+</AnchorPane>
